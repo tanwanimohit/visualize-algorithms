@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<title>My Web Page</title>
+</head>
+<style>
+.bars
+{
+	display:flex;
+	color:white;
+	justify-content:center;	
+	padding:5px;	
+}
+.bar
+{
+	
+	
+	margin : 0px 4px;
+	
+	width:50px;
+	background:#2979ff;
+	display:flex;
+	
+	justify-content:center;
+	
+}
+</style>
+<body>
+<div style="width:99%; background:#FF8F00; height:5px;   margin:0px; padding:0px; ">
+<div class="bars" id="bars">
+
+</div>
+<div style="display:flex;  ">
+</div>
+<center>
+<input type="text" id="array" placeholder="Enter Array comma seprated" size="50" style="height:40px;  "/>
+<button style="height:46px; color:white; border:0px; background:#2979ff" onclick="makeArray()">Make</button>
+</center>
+
+<script>
+
+var arrayString=document.getElementById("array");
+var bars=document.getElementById("bars");
+function makeArray()
+{
+
+	console.log(arrayString.value.split(","));
+	var array=arrayString.value.split(",");
+	for(var i=0; i<array.length; i++)
+	{
+		console.log(array[i]);
+		var bar = document.createElement("div");
+		bar.style.height=""+array[i]*3+"px";  
+		bar.className="bar";
+		var textnode = document.createTextNode(""+array[i]);
+		bar.appendChild(textnode); 
+		bars.appendChild(bar);
+	}
+}
+</script>
+</body>
+</html>
