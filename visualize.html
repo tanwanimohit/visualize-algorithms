@@ -79,15 +79,18 @@ async function SelectionSort()
 		for(var j=i+1; j<array.length; j++)
 		{
 			document.getElementById("bar"+(j+1)).style.background="green";
-			
+			console.log(array[j]+" "+array[min]);
+			console.log(array[j] < array[min]);
 				
-			if(array[j] < array[min] )
+			if(parseInt(array[j],10) < parseInt(array[min],10) )
 			{
 				document.getElementById("bar"+(i+1)).style.background="green";
+				document.getElementById("bar"+(min+1)).style.background="green";
 				document.getElementById("bar"+(j+1)).style.background="red";
 				min=j;
 				
 			}
+			console.log(min);
 			await sleep(1000);
 			
 		}
