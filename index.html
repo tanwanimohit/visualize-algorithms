@@ -2,7 +2,7 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-<title>My Web Page</title>
+<title>Algorithm Visualization</title>
 </head>
 <style>
 .bars
@@ -75,18 +75,18 @@ async function SelectionSort()
 	{
 		var min=i;
 		var bar_min=document.getElementById("bar"+(i+1));
-		bar_min.style.background="red";
+		bar_min.style.background="#f44336";
 		for(var j=i+1; j<array.length; j++)
 		{
-			document.getElementById("bar"+(j+1)).style.background="green";
+			document.getElementById("bar"+(j+1)).style.background="#64dd17";
 			console.log(array[j]+" "+array[min]);
 			console.log(array[j] < array[min]);
 				
 			if(parseInt(array[j],10) < parseInt(array[min],10) )
 			{
-				document.getElementById("bar"+(i+1)).style.background="green";
-				document.getElementById("bar"+(min+1)).style.background="green";
-				document.getElementById("bar"+(j+1)).style.background="red";
+				document.getElementById("bar"+(i+1)).style.background="#64dd17";
+				document.getElementById("bar"+(min+1)).style.background="#64dd17";
+				document.getElementById("bar"+(j+1)).style.background="#f44336";
 				min=j;
 				
 			}
