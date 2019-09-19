@@ -14,14 +14,10 @@
 }
 .bar
 {
-	
-	
-	margin : 0px 4px;
-	
+	margin : 0px 4px;	
 	width:50px;
 	background:#2979ff;
 	display:flex;
-	
 	justify-content:center;
 	
 }
@@ -35,28 +31,92 @@
 </div>
 <center>
 <input type="text" id="array" placeholder="Enter Array comma seprated" size="50" style="height:40px;  "/>
-<button style="height:46px; color:white; border:0px; background:#2979ff" onclick="makeArray()">Make</button>
+<button id="btn" style="height:46px; color:white; border:0px; background:#2979ff" onclick="CreateArray()">Make</button>
+<button id="sort" style="display:none; height:46px; color:white; border:0px; background:#2979ff " onclick="SelectionSort()" >Selection Sort</button>
 </center>
 
 <script>
 
 var arrayString=document.getElementById("array");
+var btn=document.getElementById("btn");
 var bars=document.getElementById("bars");
+var array;
+function CreateArray()
+{
+console.log(arrayString.value.split(","));
+array=arrayString.value.split(",");
+makeArray();
+document.getElementById("sort").style.display="block";
+}
 function makeArray()
 {
-
-	console.log(arrayString.value.split(","));
-	var array=arrayString.value.split(",");
+	bars.innerHTML="";
 	for(var i=0; i<array.length; i++)
 	{
-		console.log(array[i]);
+		//console.log(array[i]);
 		var bar = document.createElement("div");
 		bar.style.height=""+array[i]*3+"px";  
 		bar.className="bar";
+		bar.id="bar"+(i+1);
 		var textnode = document.createTextNode(""+array[i]);
 		bar.appendChild(textnode); 
 		bars.appendChild(bar);
 	}
+	btn.style.display="none";
+	arrayString.style.display="none";
+	
+}
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
+async function SelectionSort()
+{
+	for(var i=0; i<array.length; i++)
+	{
+		var min=i;
+		var bar_min=document.getElementById("bar"+(i+1));
+		bar_min.style.background="red";
+		for(var j=i+1; j<array.length; j++)
+		{
+			document.getElementById("bar"+(j+1)).style.background="green";
+			
+				
+			if(array[j] < array[min] )
+			{
+				document.getElementById("bar"+(i+1)).style.background="green";
+				document.getElementById("bar"+(j+1)).style.background="red";
+				min=j;
+				
+			}
+			await sleep(1000);
+			
+		}
+		var temp=array[min];
+		array[min]=array[i];
+		array[i]=temp;
+		/*for(var m=0; m<array.length; m++)
+		{
+			document.getElementById("bar"+(m+1)).style.background="#2979ff";
+		}*/
+		makeArray();
+		//swapElements(document.getElementById("bar"+(i+1)),document.getElementById("bar"+(min+1)))
+	}
+	
+}
+
+function swapElements(obj1, obj2) {
+    // create marker element and insert it where obj1 is
+    var temp = document.createElement("div");
+    obj1.parentNode.insertBefore(temp, obj1);
+
+    // move obj1 to right before obj2
+    obj2.parentNode.insertBefore(obj1, obj2);
+
+    // move obj2 to right before where obj1 used to be
+    temp.parentNode.insertBefore(obj2, temp);
+
+    // remove temporary marker node
+    temp.parentNode.removeChild(temp);
 }
 </script>
 </body>
