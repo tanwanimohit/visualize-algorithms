@@ -20,7 +20,6 @@
 	display:flex;
 	justify-content:center;
 	font-weight:bold;
-
 }
 </style>
 <body>
@@ -33,21 +32,36 @@
 <div style="display:flex;  ">
 </div>
 <center>
-<input type="text" id="array" placeholder="Enter Array comma seprated" style="height:40px;  "/>
-<button id="btn" style="padding:13px; color:white; border:0px; background:#2979ff" onclick="CreateArray()">Make</button>
-<a id="btns" style="padding:13px; text-decoration:none; color:white; border:0px; background:#2979ff" href="index1.html">Down</a>
+<input type="text" id="array" placeholder="Enter Array comma seprated" style="  padding:10px 10px;"/>
+<button id="btn" style="padding:13px; color:white; border:0px; background:#2979ff" onclick="CreateArray()">Make Array</button><br><br>
+<button id="btn2" style="padding:13px; color:white; border:0px; background:#2979ff" onclick="RandomArray()">Random Array</button>
+<button id="btn3" style="padding:13px; color:white; border:0px; background:#2979ff" onclick="javascript:window.open('./down.html','_self');">UpSideDown</button>
+<!--<a id="btns" style="padding:12px; text-decoration:none; color:white; border:0px; background:#2979ff" href="index1.html">Down</a>-->
 <button id="sort" style="display:none; height:46px; color:white; border:0px; background:#2979ff " onclick="SelectionSort()" >Selection Sort</button>
 <button id="bsort" style="display:none; height:46px; color:white; border:0px; background:#2979ff " onclick="BubbleSort()" >Bubble Sort</button>
 
 </center>
 
 <script>
-
 var arrayString=document.getElementById("array");
 var btn=document.getElementById("btn");
+var btn1=document.getElementById("btn3");
+var btn2=document.getElementById("btn2");
 var btns=document.getElementById("btns");
 var bars=document.getElementById("bars");
-var array;
+var array=[];
+function RandomArray()
+{
+	for(var i=0; i<10; i++)
+	{
+		//console.log(parseInt(Math.random()*100));
+		array[i]=parseInt(Math.random()*100);
+	}
+	document.getElementById("sort").style.display="inline-block";
+	document.getElementById("bsort").style.display="inline-block";
+	makeArray();
+	
+}
 function CreateArray()
 {
 console.log(arrayString.value.split(","));
@@ -55,10 +69,8 @@ array=arrayString.value.split(",");
 makeArray();
 document.getElementById("sort").style.display="inline-block";
 document.getElementById("bsort").style.display="inline-block";
-
 }
 function makeArray()
-
 {
 	bars.innerHTML="";
 	for(var i=0; i<array.length; i++)
@@ -77,7 +89,9 @@ function makeArray()
 		bars.appendChild(bar);
 	}
 	btn.style.display="none";
-	btns.style.display="none";
+	btn1.style.display="none";
+	btn2.style.display="none";
+	
 	arrayString.style.display="none";
 	
 }
@@ -121,8 +135,6 @@ async function SelectionSort()
 	}
 	
 }
-
-
 async function BubbleSort()
 {
 	for(var i=0; i<array.length; i++)
@@ -131,39 +143,31 @@ async function BubbleSort()
 		{
 			document.getElementById("bar"+(j+1)).style.background="#64dd17";
 			document.getElementById("bar"+(j+2)).style.background="#64dd17";
-
-			await sleep(500);
+			await sleep(600);
 			if(parseInt(array[j],10)>parseInt(array[j+1],10))
 			{
-
 				document.getElementById("bar"+(j+1)).style.background="#f44336";
 				document.getElementById("bar"+(j+2)).style.background="#f44336";
 				var temp=array[j];
 				array[j]=array[j+1];
 				array[j+1]=temp;
-
-				await sleep(400);
+				await sleep(500);
 				
 			}
 			makeArray();
-
 			
 		}
 		makeArray();
 	}
 }
-
 function swapElements(obj1, obj2) {
     // create marker element and insert it where obj1 is
     var temp = document.createElement("div");
     obj1.parentNode.insertBefore(temp, obj1);
-
     // move obj1 to right before obj2
     obj2.parentNode.insertBefore(obj1, obj2);
-
     // move obj2 to right before where obj1 used to be
     temp.parentNode.insertBefore(obj2, temp);
-
     // remove temporary marker node
     temp.parentNode.removeChild(temp);
 }
