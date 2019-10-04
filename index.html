@@ -6,22 +6,25 @@
 	<title>Algorithm Visualization</title>
 
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-	<h1 class="is-centered">Visualize Algorithms</h1>
+	<div class="row">
+	<h1 class="is-centered col-3 offset-5">Visualize Algorithms</h1>
+	<button id="btn3" class="btn btn-warning col-1"
+				onclick="javascript:window.open('./down.html','_self');">View UpSide-Down</button>
+				</div>
+	<br>
 	<div class="wrapper">
 		<div class="bars" id="bars"></div>
-		<div style="display:flex;"></div>
 		<div class="is-centered">
 			<input type="text" id="array" placeholder="Enter Array comma seprated" />
-			<button id="btn" class="button-primary" onclick="CreateArray()">Make Array</button>
+
 			<br>
 			<br>
-			<button id="btn2" class="button-primary" onclick="RandomArray()">Random Array</button>
-			<button id="btn3" class="button-primary"
-				onclick="javascript:window.open('./down.html','_self');">UpSideDown</button>
-			<!-- <a id="btns" style="padding:12px; text-decoration:none; color:white; border:0px; background:#2979ff" href="index1.html">Down</a> -->
+			<button id="btn" class="btn btn-primary" onclick="CreateArray()">Use Custom Array</button>
+			<button id="btn2" class="btn btn-primary" onclick="RandomArray()">Use a Random Array</button>
 			<button id="sort" class="button-sort" onclick="SelectionSort()">Selection Sort</button>
 			<button id="bsort" class="button-sort" onclick="BubbleSort()">Bubble Sort</button>
 			<button id="Obsort" class="button-sort" onclick="OBubbleSort()">Optimized Bubble Sort</button>
