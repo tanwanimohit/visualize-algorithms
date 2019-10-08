@@ -1,6 +1,4 @@
-<h1 align="center">Visualize Algorithms</h1>
- <br>
- <img src="https://github.com/SarahLizDettloff/visualize-algorithms/blob/master/screenshot.png?raw=true" alt="Visualize Algorithms"> </br>
+<h1 align="center"> Visualize Algorithms </h>
 
 ---
 ## About
@@ -13,10 +11,9 @@ A tool which provides data visualization to algorithms. Current features:
 ## Clone Directions
 ``` git clone https://github.com/tanwanimohit/visualize-algorithms.git ```
 
-
-
-## Contrbutors
-* [tanwanimohit](https://github.com/tanwanimohit)
-* [citaUtec](https://github.com/citaUtec)
-* [VishalTanwani](https://github.com/VishalTanwani)
-* [Axieum](https://github.com/Axieum)
+## How to contribute
+1. Fork the repo
+2. Clone the project to your computer
+3. Commit changes to your branch
+4. Push your work back up to your fork
+5. Submit a Pull request
