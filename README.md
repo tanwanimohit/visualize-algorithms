@@ -1,3 +1,4 @@
+
 <h1 align="center"> Visualize Algorithms </h>
 
 ---
@@ -17,3 +18,4 @@ A tool which provides data visualization to algorithms. Current features:
 3. Commit changes to your branch
 4. Push your work back up to your fork
 5. Submit a Pull request
+
