@@ -1,16 +1,21 @@
-# visualize-algorithms
-:fire: Sorting Algorithms Visualization
 
-This project shows visual representation of:
-- Selection sort
-- Bubble sort
-- Optimized bubble sort
-- Merge sort
+<h1 align="center"> Visualize Algorithms </h>
 
-### Installation & Development
+---
+## About
+A tool which provides data visualization to algorithms. Current features:
+* Selection Sort
+* Bubble Sort
+* Optimized Bubble Sort
+* Merge Sort
 
-1. Clone the repo<br>
-2. Inside root folder open index.html file to view it in the browser
+## Clone Directions
+``` git clone https://github.com/tanwanimohit/visualize-algorithms.git ```
 
-### Contribution
-We need definitely need some help with this project - especially setting it up as a interesting open source playground. Please contact us if you are interested.
+## How to contribute
+1. Fork the repo
+2. Clone the project to your computer
+3. Commit changes to your branch
+4. Push your work back up to your fork
+5. Submit a Pull request
+
