@@ -4,30 +4,30 @@
 
 <head>
 	<title>Algorithm Visualization</title>
-
 	<link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-	<h1 class="is-centered">Visualize Algorithms</h1>
-	<div class="wrapper">
+  <h1 class="is-centered">Visualize Algorithms</h1>
+  <h2 class="is-centered">Current view : <span id="current-view">down</span></h2>
+	<div id="wrapper" class="wrapper">
 		<div class="bars" id="bars"></div>
-		<div style="display:flex;"></div>
-		<div class="is-centered">
-			<input type="text" id="array" placeholder="Enter Array comma seprated" />
-			<button id="btn" class="button-primary" onclick="CreateArray()">Make Array</button>
-			<br>
-			<br>
-			<button id="btn2" class="button-primary" onclick="RandomArray()">Random Array</button>
-			<button id="btn3" class="button-primary"
-				onclick="javascript:window.open('./down.html','_self');">UpSideDown</button>
-			<!-- <a id="btns" style="padding:12px; text-decoration:none; color:white; border:0px; background:#2979ff" href="index1.html">Down</a> -->
-			<button id="sort" class="button-sort" onclick="SelectionSort()">Selection Sort</button>
-			<button id="bsort" class="button-sort" onclick="BubbleSort()">Bubble Sort</button>
-			<button id="Obsort" class="button-sort" onclick="OBubbleSort()">Optimized Bubble Sort</button>
-			<button id="MergeSort" class="button-sort" onclick="mergeSortFunction()">Merge Sort</button>
-		</div>
-	</div>
+  </div>
+  
+  <div class="is-centered">
+    <input type="text" id="array" placeholder="Enter Array comma seprated" />
+    <button id="btn" class="button-primary" onclick="CreateArray()">Make Array</button>
+    <br>
+    <br>
+    <button id="btn2" class="button-primary" onclick="RandomArray()">Random Array</button>
+    <button id="btn3" class="button-primary"
+      onclick="SwitchView()">UpSideDown</button>
+    <!-- <a id="btns" style="padding:12px; text-decoration:none; color:white; border:0px; background:#2979ff" href="index1.html">Down</a> -->
+    <button id="sort" class="button-sort" onclick="SelectionSort()">Selection Sort</button>
+    <button id="bsort" class="button-sort" onclick="BubbleSort()">Bubble Sort</button>
+    <button id="Obsort" class="button-sort" onclick="OBubbleSort()">Optimized Bubble Sort</button>
+    <button id="MergeSort" class="button-sort" onclick="mergeSortFunction()">Merge Sort</button>
+  </div>
 
 	<script src="js/index.js"></script>
 </body>
