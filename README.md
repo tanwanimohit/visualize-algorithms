@@ -5,6 +5,7 @@
 ## About
 A tool which provides data visualization to algorithms. Current features:
 * Selection Sort
+* Insertion Sort
 * Bubble Sort
 * Optimized Bubble Sort
 * Merge Sort
