@@ -4,10 +4,9 @@
 }
 
 .wrapper {
-    width:99%;
-    height:5px;
-    background:#FF8F00;
-    margin:0px;
+    width:100%;
+    border-top: solid 5px #FF8F00;
+    margin: 10px 0;
     padding:0px;
 }
 
@@ -34,7 +33,6 @@
     display: flex;
     color: white;
     justify-content: center;
-    padding: 5px;
 }
 
 .bar {
@@ -44,4 +42,33 @@
     display: flex;
     justify-content: center;
     font-weight: bold;
+}
+
+.view-up.wrapper {
+  border-top: none;
+  border-bottom: solid 5px #FF8F00;
+}
+
+.view-up .bars
+{
+	align-items:flex-end;	
+}
+
+.view-up .bar
+{
+	position:relative;   
+	align-items:center;
+	
+}
+
+
+@keyframes left{
+	from {left: 0px;}
+	to {left: 50px;
+	opacity:0;}
+}
+@keyframes right{
+	from {right: 50px;}
+	to {right: 70px;
+	opacity:1;}
 }
