@@ -1,5 +1,5 @@
 
-<h1 align="center"> Visualize Algorithms </h>
+<h1 align="center"> Visualize Algorithms </h1>
 
 ## About
 A tool which provides data visualization to algorithms. Current features:
