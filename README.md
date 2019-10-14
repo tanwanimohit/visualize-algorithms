@@ -1,7 +1,6 @@
 
 <h1 align="center"> Visualize Algorithms </h>
 
----
 ## About
 A tool which provides data visualization to algorithms. Current features:
 * Selection Sort
