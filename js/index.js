@@ -12,6 +12,7 @@ function RandomArray() {
     array[i] = parseInt(Math.random() * 100);
   }
   document.getElementById("sort").style.display = "inline-block";
+  document.getElementById("insertSort").style.display = "inline-block";
   document.getElementById("bsort").style.display = "inline-block";
   document.getElementById("Obsort").style.display = "inline-block";
   document.getElementById("MergeSort").style.display = "inline-block";
@@ -23,6 +24,7 @@ function CreateArray() {
   array = arrayString.value.split(",");
   makeArray();
   document.getElementById("sort").style.display = "inline-block";
+  document.getElementById("insertSort").style.display = "inline-block";
   document.getElementById("bsort").style.display = "inline-block";
   document.getElementById("Obsort").style.display = "inline-block";
   document.getElementById("MergeSort").style.display = "inline-block";
@@ -93,6 +95,23 @@ async function SelectionSort() {
     makeArray();
     //swapElements(document.getElementById("bar"+(i+1)),document.getElementById("bar"+(min+1)))
   }
+}
+
+async function InsertionSort() {
+  //assume first item is 'sorted'
+  for (var i = 0; i < array.length; i++) {
+    var tmp = array[i]; //Copy current element
+    var bar_tmp = document.getElementById("bar" + (i + 1));
+    bar_tmp.style.background = "#64dd17";
+    for (var j = i - 1; j >= 0 && (array[j] > tmp); j--) {
+      array[j+1] = array[j]; // Shift number
+      document.getElementById("bar" + (j + 1)).style.background = "#f44336";
+    }
+    // insert copied # at correct place at sorted section
+    array[j+1] = tmp;
+    await sleep(500);
+  }
+  makeArray();
 }
 
 async function BubbleSort() {
