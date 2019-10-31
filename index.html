@@ -1,37 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
-	<title>Algorithm Visualization</title>
-	<link rel="stylesheet" href="css/index.css">
+    <title>Algorithm Visualization</title>
+    <link href="css/index.css" rel="stylesheet">
 </head>
-
 <body>
-  <h1 class="is-centered">Visualize Algorithms</h1>
-  <h2 class="is-centered">Current view : <span id="current-view">down</span></h2>
-	<div id="wrapper" class="wrapper">
-		<div class="bars" id="bars"></div>
-  </div>
-  
-  <div class="is-centered">
-    <input type="text" id="array" placeholder="Enter Array comma seprated" />
+<h1 class="is-centered">Visualize Algorithms</h1>
+<h2 class="is-centered">Current view : <span id="current-view">down</span></h2>
+<div class="wrapper" id="wrapper">
+    <div class="bars" id="bars"></div>
+</div>
+
+<div class="is-centered">
+    <label for="array">Array: </label><input id="array" placeholder="e.g. 2,4,2" type="text">
     <button id="btn" class="button-primary" onclick="CreateArray()">Make Array</button>
     <br>
     <br>
     <button id="btn2" class="button-primary" onclick="RandomArray()">Random Array</button>
-    <button id="btn3" class="button-primary"
-      onclick="SwitchView()">UpSideDown</button>
+    <button class="button-primary" id="btn3" onclick="SwitchView()">UpSideDown</button>
     <!-- <a id="btns" style="padding:12px; text-decoration:none; color:white; border:0px; background:#2979ff" href="index1.html">Down</a> -->
     <button id="sort" class="button-sort" onclick="SelectionSort()">Selection Sort</button>
     <button id="insertSort" class="button-sort" onclick="InsertionSort()">Insertion Sort</button>
     <button id="bsort" class="button-sort" onclick="BubbleSort()">Bubble Sort</button>
     <button id="Obsort" class="button-sort" onclick="OBubbleSort()">Optimized Bubble Sort</button>
     <button id="MergeSort" class="button-sort" onclick="mergeSortFunction()">Merge Sort</button>
+    <button class="button-sort" id="Quicksort" onclick="Quicksort()">Quick sort</button>
+</div>
 
-  </div>
-
-	<script src="js/index.js"></script>
+<script src="js/index.js"></script>
 </body>
 
 </html>
